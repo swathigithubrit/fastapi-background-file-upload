@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blocking Upload | FastAPI</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; text-align: center; margin-top: 5%; }
+        form { background: white; padding: 20px; border-radius: 10px; width: 400px; margin: auto; }
+        input { margin: 10px; }
+        button { background: #2563eb; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+        button:hover { background: #1d4ed8; }
+        .msg { margin-top: 15px; color: #16a34a; }
+        a { color: #16a34a; }
+    </style>
+</head>
+<body>
+
+    <h2>Blocking Upload Example (Takes Time)</h2>
+
+    <form action="/upload-blocking/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload File</button>
+    </form>
+
+    {% if status %}
+    <p class="msg">{{ status }}</p>
+    {% endif %}
+
+    <br>
+    <a href="/background">→ Switch to Background Upload</a>
+
+</body>
+</html>
