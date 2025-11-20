@@ -102,12 +102,18 @@ http://127.0.0.1:8000/background
 1. GET /
 
 Loads the Blocking Upload UI.
+
+
 2. GET /background
 
 Loads the Background Upload UI.
+
+
 3. POST /upload-blocking/
 
 Processes the file upload synchronously.
+
+
 4. POST /upload-nonblocking/
 
 Processes file upload asynchronously in background.
